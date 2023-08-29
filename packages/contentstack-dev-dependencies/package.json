@@ -1,5 +1,5 @@
 {
-  "name": "cli-dev-dependencies",
+  "name": "cli-dev-dependencies-123",
   "version": "1.2.3",
   "description": "Customized dev dependencies for ContentStack projects",
   "main": "lib/index.js",
