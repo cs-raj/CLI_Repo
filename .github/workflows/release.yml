@@ -12,7 +12,7 @@ jobs:
       - uses: pnpm/action-setup@v2.2.4
         with:
           version: 7
-      - uses: actions/setup-node@v3.6.0
+      - uses: actions/setup-node@v1
         with:
           node-version: '18.x'
           cache: 'pnpm'
@@ -52,3 +52,16 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./packages/contentstack-utilities/package.json
+
+      - uses: actions/checkout@v3.5.3
+        with:
+          ref: 'prod-qa-pipeline'
+      - run: echo ${{ steps.publish-core.outputs.version  }} > version.md
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Released version'
+      - name: Create Release
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create v${{ steps.publish-core.outputs.version }} --title "Release ${{ steps.publish-core.outputs.version }}" --generate-notes
