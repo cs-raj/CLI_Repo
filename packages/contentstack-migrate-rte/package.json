@@ -1,5 +1,5 @@
 {
-  "name": "cli-cm-migrate-rte-123",
+  "name": "cli-cm-migrate-rte-con-pack",
   "description": "Contentstack CLI plugin to migrate HTML RTE to JSON RTE",
   "version": "1.4.10",
   "author": "contentstack",
