@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "cli-ram-pack",
   "description": "Command-line tool (CLI) to interact with Contentstack",
   "version": "1.8.2",
   "author": "Contentstack",

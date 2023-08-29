@@ -1,5 +1,5 @@
 {
-  "name": "cli-utilities-ra-pack",
+  "name": "cli-utilities-ram-pack",
   "version": "1.5.6",
   "description": "Utilities for contentstack projects",
   "main": "lib/index.js",
