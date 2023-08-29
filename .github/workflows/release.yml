@@ -256,13 +256,6 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./packages/contentstack/package.json
-      - uses: actions/checkout@v3.5.3
-        with:
-          ref: 'prod-qa-pipeline'
-      - run: echo ${{ steps.publish-core.outputs.version  }} > version.md
-      - uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Released version'
       - name: Create Release
         id: create_release
         env:
