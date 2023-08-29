@@ -1,7 +1,7 @@
 {
-  "name": "cli-raz-pack",
+  "name": "cli-rao-pack",
   "description": "Command-line tool (CLI) to interact with Contentstack",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "author": "Contentstack",
   "bin": {
     "csdx": "./bin/run"
