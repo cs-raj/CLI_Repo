@@ -52,18 +52,7 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./packages/contentstack-utilities/package.json
-      - name: Installing dependencies of core
-        id: core-installation
-        if: ${{env.release_releaseAll == 'true' || env.release_plugins_core == 'true'}}
-        working-directory: ./packages/contentstack
-        run: npm install
-      - name: Publishing core
-        id: publish-core
-        uses: JS-DevTools/npm-publish@v2.2.1
-        if: ${{ steps.core-installation.conclusion == 'success'  }}
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: ./packages/contentstack/package.json
+
       - uses: actions/checkout@v3.5.3
         with:
           ref: 'prod-qa-pipeline'
