@@ -5,7 +5,7 @@ import { expect } from 'chai';
 
 describe('File system operations', () => {
   const content = `const API = 'hello world'`;
-  const folderName = createMergeScripts({ status: 'modified', uid: 'blog' }, content, '1234-rat-pack4');
+  const folderName = createMergeScripts({ status: 'modified', uid: 'blog' }, content, '1234-ray-pack4');
 
   it('Should proceed to generate or throw error when permission not provided', () => {
     const { W_OK: writePermission } = fs.constants;
